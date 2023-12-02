@@ -1,10 +1,10 @@
 name:                haskell
 version:             0.1.0.0
 github:              "githubuser/haskell"
-license:             BSD-3-Clause
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2023 Author name here"
+license:             MIT
+author:              "gouf"
+maintainer:          "innocent.zero@gmail.com"
+copyright:           "2023 gouf"
 
 extra-source-files:
 - README.md
@@ -48,12 +48,16 @@ executables:
     - haskell
 
 tests:
-  haskell-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - haskell
+  spec:
+    defaults: hspec/hspec@main
+    # dependencies: strip
+
+  # haskell-test:
+  #   main:                Spec.hs
+  #   source-dirs:         test
+  #   ghc-options:
+  #   - -threaded
+  #   - -rtsopts
+  #   - -with-rtsopts=-N
+  #   dependencies:
+  #   - haskell
