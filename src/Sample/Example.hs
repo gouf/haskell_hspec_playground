@@ -1,4 +1,4 @@
-module Example
+module Sample.Example
   ( add
   ) where
 
